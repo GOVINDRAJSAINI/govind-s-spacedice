@@ -31,3 +31,30 @@ var randomImage4 = "dice"+randomNumber4+".png";
 var randomImageSource4 = "images/" +randomImage4;
 var image4 = document.querySelectorAll("img")[3];
 image4.setAttribute("src" , randomImageSource4);
+
+
+if (randomNumber1>randomNumber2 && 
+    randomNumber1>randomNumber3 && 
+    randomNumber1>randomNumber4){
+    document.querySelector("h2").innerHTML = " 🚩 LOOSER = PLAYER 1";
+}
+
+else if (randomNumber2> randomNumber1 && 
+          randomNumber2> randomNumber3 && 
+          randomNumber2> randomNumber4){
+    document.querySelector("h2").innerHTML = " 🚩 LOOSER = PLAYER 2";
+}
+ else if (randomNumber3> randomNumber1 && 
+    randomNumber3>randomNumber2 && 
+    randomNumber3>randomNumber4){
+    document.querySelector("h2").innerHTML =  "🚩 LOOSER = PLAYER 3";
+ }
+
+ else if (randomNumber4> randomNumber1 && 
+    randomNumber4> randomNumber2 && 
+    randomNumber4> randomNumber3){
+    document.querySelector("h2").innerHTML = "🚩 LOOSER = PLAYER 4";
+}
+else {
+    document.querySelector("h2").innerHTML = "DRAW";
+}
